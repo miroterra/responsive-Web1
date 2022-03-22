@@ -10,8 +10,32 @@ body {
 #title {
   background-color: #eaf7fd;
 }
+#contents .container {
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#cont_left {
+  float: left;
+  width: 250px;
+}
+#cont_center {
+  overflow: hidden;
+  margin-right: 250px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+#cont_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+}
+#footer {
+  border-top: 1px solid #dbdbdb;
+}
 /* container */
 .container {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   /* background: rgba(0, 0, 0, 0.3); */
@@ -194,6 +218,70 @@ body {
   box-shadow: 0 0 0 3px rgba(71, 154, 191, 0.1) inset, 0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
+/* contents */
+.column {
+  padding: 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.column .col_tit {
+  font-size: 20px;
+  color: #2f7fa6;
+  padding-bottom: 5px;
+}
+.column .col_desc {
+  border-bottom: 1px dashed #dbdbdb;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  color: #878787;
+  line-height: 18px;
+}
+.column .col1 {
+}
+.column .col2 {
+}
+.column .col3 {
+  border-bottom: 0;
+}
+.column .col4 {
+}
+.column .col5 {
+}
+.column .col6 {
+  border-bottom: 0;
+}
+.column .col7 {
+}
+.column .col8 {
+}
+.column .col9 {
+  border-bottom: 0;
+}
+
+/* menu */
+.menu {
+}
+.menu li {
+  position: relative;
+}
+.menu li a {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #878787;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px;
+  display: block;
+  transition: box-shadow 0.34s ease, background 0.34s;
+}
+.menu li a i {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.menu li a:hover {
+  box-shadow: inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
+  color: #fff;
+  background: rgba(36, 130, 174, 0.9);
+}
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -203,12 +291,24 @@ body {
   .row {
     padding: 0 15px;
   }
+  #contents .container {
+    border: 0;
+  }
 }
 /* 화면 너비 0 ~ 1024px */
 @media (max-width: 1024px) {
 }
 /* 화면 너비 0 ~ 960px */
 @media (max-width: 960px) {
+  #cont_center {
+    margin-right: 0;
+    border-right: 0;
+  }
+  #cont_right {
+    position: static;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+  }
   .nav > div {
     float: none;
     width: 100%;
@@ -228,6 +328,13 @@ body {
 }
 /* 화면 너비 0 ~ 768px */
 @media (max-width: 768px) {
+  #cont_left {
+    float: none;
+    width: 100%;
+  }
+  #cont_center {
+    border-left: 0;
+  }
 }
 /* 화면 너비 0 ~ 600px */
 @media (max-width: 600px) {
