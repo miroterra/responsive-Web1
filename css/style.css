@@ -23,7 +23,6 @@ body {
   margin-right: 250px;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
-  height: 1000px;
 }
 #cont_right {
   position: absolute;
@@ -400,6 +399,92 @@ body {
   .blog2 .img-retana {
     background-image: url(../img/blog4_@3.jpg);
   }
+}
+/* 이미지 슬라이드 */
+.slider {
+  position: relative;
+}
+.slider figure {
+  position: relative;
+}
+.slider .slideBox {
+  display: none;
+}
+.slider figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+}
+.slider figcaption em {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: 'Abel', sans-serif;
+}
+.slider figcaption span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.slider .active figcaption em {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .active figcaption span {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .prev,
+.slider .next {
+  display: inline-block;
+  position: absolute;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  color: #5dbfeb;
+  font-size: 30px;
+  cursor: pointer;
+}
+.slider .prev:hover,
+.slider .next:hover {
+  color: #2b91c8;
+}
+
+.slider .prev {
+  left: 9px;
+  bottom: -22px;
+}
+.slider .next {
+  right: 9px;
+  bottom: -22px;
+}
+.dot_line {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #5dbfeb;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  margin-top: 8px;
+}
+.dot.active,
+.dot:hover {
+  background: #2b91c8;
 }
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */

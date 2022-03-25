@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="/js/slide.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -187,10 +189,55 @@
         <section id="cont_center">
           <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
           <article class="column col4">
-            <h4 class="col_tit">Title</h4>
-            <p class="col_desc">이 곳은 설명 부분입니다.</p>
-            <!--  -->
-            <!-- // -->
+            <h4 class="col_tit">Slider</h4>
+            <p class="col_desc">바닐라 JS를 이용한 이미지 슬라이드 효과입니다. </p>
+            <!-- image slide  -->
+            <div class="slider">
+              <div class="slideBox">
+                <figure>
+                  <img src="img/slider01.jpg" alt="이미지1">
+                  <figcaption><em>Responsive Site</em><span>바닐라 JS를 이용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                </figure>
+              </div>
+              <div class="slideBox">
+                <figure>
+                <img src="img/slider02.jpg" alt="이미지2">
+                <figcaption><em>Responsive Site</em><span>바닐라 JS를 이용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+              </figure>
+            </div >
+              <div class="slideBox">
+                <figure>
+                  <img src="img/slider03.jpg" alt="이미지3">
+                  <figcaption><em>Responsive Site</em><span>바닐라 JS를 이용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                </figure>
+              </div>
+              <div class="slideBox">
+                <figure>
+                  <img src="img/slider04.jpg" alt="이미지4">
+                  <figcaption><em>Responsive Site</em><span>바닐라 JS를 이용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                </figure>
+              </div>
+              <div class="slideBox">
+                <figure>
+                  <img src="img/slider05.jpg" alt="이미지5">
+                  <figcaption><em>Responsive Site</em><span>바닐라 JS를 이용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                </figure>
+              </div>
+              <button class="prev" onclick="plusSlides(-1)">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+              </button>
+              <button class="next" onclick="plusSlides(1)">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </button>
+          </div>
+          <div class="dot_line">
+            <button class="dot" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
+            <button class="dot" onclick="currentSlide(3)"></button>
+            <button class="dot" onclick="currentSlide(4)"></button>
+            <button class="dot" onclick="currentSlide(5)"></button>
+          </div>
+            <!-- //image slide -->
           </article>
           <!-- //col4 -->
           <article class="column col5">
