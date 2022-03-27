@@ -457,13 +457,12 @@ body {
 .slider .next:hover {
   color: #2b91c8;
 }
-
 .slider .prev {
-  left: 9px;
+  left: 0;
   bottom: -22px;
 }
 .slider .next {
-  right: 9px;
+  right: 0;
   bottom: -22px;
 }
 .dot_line {
@@ -485,6 +484,12 @@ body {
 .dot.active,
 .dot:hover {
   background: #2b91c8;
+}
+/* lightbox */
+.square a {
+  float: left;
+  width: 19%;
+  margin: 0.5%;
 }
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */
