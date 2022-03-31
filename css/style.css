@@ -331,7 +331,6 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   padding-left: 8px;
-  padding-bottom: 5px;
   max-height: 40px;
 }
 .notice2 li::before {
@@ -400,6 +399,7 @@ body {
     background-image: url(../img/blog4_@3.jpg);
   }
 }
+
 /* 이미지 슬라이드 */
 .slider {
   position: relative;
@@ -485,11 +485,14 @@ body {
 .dot:hover {
   background: #2b91c8;
 }
+
 /* lightbox */
 .square a {
+  position: relative;
   float: left;
   width: 19%;
   margin: 0.5%;
+  overflow: hidden;
 }
 .square a img {
   width: 100%;
@@ -504,8 +507,43 @@ body {
   left: 0;
   bottom: -30px;
   opacity: 1;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
+.square a:hover em {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.57);
+}
+.square a:nth-child(1):hover img {
+  filter: blur(2px);
+}
+.square a:nth-child(2):hover img {
+  filter: brightness(50%);
+}
+.square a:nth-child(3):hover img {
+  filter: contrast(10%);
+}
+.square a:nth-child(4):hover img {
+  filter: grayscale(100%);
+}
+.square a:nth-child(5):hover img {
+  filter: hue-rotate(120deg);
+}
+.square a:nth-child(6):hover img {
+  filter: invert(100%);
+}
+.square a:nth-child(7):hover img {
+  filter: opacity(10%);
+}
+.square a:nth-child(8):hover img {
+  filter: saturate(10%);
+}
+.square a:nth-child(9):hover img {
+  filter: sepia(120%);
+}
+.square a:nth-child(10):hover img {
+  filter: sepia(120%) hue-rotate(120deg);
+}
+
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -543,7 +581,7 @@ body {
   #cont_right {
     position: static;
     width: 100%;
-    border-bottom: 1px solid #dbdbdb;
+    overflow: hidden;
   }
   .nav > div {
     float: none;
@@ -560,6 +598,19 @@ body {
   }
   .nav > div ol {
     margin-bottom: 10px;
+  }
+  #cont_right .column {
+    float: left;
+    width: 33.3333%;
+    box-sizing: border-box;
+  }
+  #cont_right .column.col7 {
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 0;
+  }
+  #cont_right .column.col8 {
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 0;
   }
 }
 /* 화면 너비 0 ~ 768px */
@@ -632,6 +683,21 @@ body {
   .column.col4 {
     border-top: 1px solid #dbdbdb;
   }
+
+  #cont_right .column {
+    width: 33.3333%;
+  }
+
+  .slider figcaption {
+    padding: 10px;
+  }
+  .slider figcaption em {
+    font-size: 18px;
+  }
+  .slider figcaption span {
+    font-size: 14px;
+  }
+
   .square a {
     width: 49%;
   }

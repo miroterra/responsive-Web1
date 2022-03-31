@@ -2,7 +2,7 @@ const slides = document.getElementsByClassName('slideBox'),
   dots = document.getElementsByClassName('dot');
 
 let slideIndex = 0,
-  myVar;
+  autoSlide;
 
 showSlides();
 
@@ -17,11 +17,11 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
-  myVar = setTimeout(showSlides, 4000);
+  autoSlide = setTimeout(showSlides, 4000);
 }
 
 function stopSlide() {
-  clearTimeout(myVar);
+  clearTimeout(autoSlide);
 }
 
 function plusSlides(n) {
