@@ -389,14 +389,14 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5),
   only screen and (min-resolution: 1.5dppx) {
-  .blog2 .img-retana {
+  .blog2 .img-retina {
     background-image: url(../img/blog4_@2.jpg);
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3),
   only screen and (min-device-pixel-ratio: 3),
   only screen and (min-resolution: 3dppx) {
-  .blog2 .img-retana {
+  .blog2 .img-retina {
     background-image: url(../img/blog4_@3.jpg);
   }
 }
@@ -491,6 +491,21 @@ body {
   width: 19%;
   margin: 0.5%;
 }
+.square a img {
+  width: 100%;
+  display: block;
+}
+.square a em {
+  background: rgba(0, 0, 0, 0.77);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  opacity: 1;
+  transition: all 0.3 ease;
+}
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -503,9 +518,21 @@ body {
   #contents .container {
     border: 0;
   }
+  .square a {
+    width: 24%;
+  }
+  .square a:nth-child(5n) {
+    display: none;
+  }
 }
 /* 화면 너비 0 ~ 1024px */
 @media (max-width: 1024px) {
+  .square a {
+    width: 32.3333%;
+  }
+  .square a:nth-child(5) {
+    display: block;
+  }
 }
 /* 화면 너비 0 ~ 960px */
 @media (max-width: 960px) {
@@ -605,6 +632,12 @@ body {
   .column.col4 {
     border-top: 1px solid #dbdbdb;
   }
+  .square a {
+    width: 49%;
+  }
+  .square a:nth-child(5) {
+    display: none;
+  }
 }
 /* 화면 너비 0 ~ 480px */
 @media (max-width: 480px) {
@@ -616,5 +649,10 @@ body {
   }
   .nav > div:last-child li {
     width: 100%;
+  }
+  .square a {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
