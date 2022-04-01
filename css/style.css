@@ -235,25 +235,16 @@ body {
   color: #878787;
   line-height: 18px;
 }
-.column .col1 {
-}
-.column .col2 {
-}
-.column .col3 {
+
+.column.col3 {
   border-bottom: 0;
 }
-.column .col4 {
-}
-.column .col5 {
-}
-.column .col6 {
+
+.column.col6 {
   border-bottom: 0;
 }
-.column .col7 {
-}
-.column .col8 {
-}
-.column .col9 {
+
+.column.col9 {
   border-bottom: 0;
 }
 
@@ -295,6 +286,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-left: 8px;
+  margin-bottom: 10px;
 }
 .notice1 li::before {
   content: '';
@@ -331,6 +323,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   padding-left: 8px;
+  margin-bottom: 10px;
   max-height: 40px;
 }
 .notice2 li::before {
@@ -544,6 +537,35 @@ body {
   filter: sepia(120%) hue-rotate(120deg);
 }
 
+/* video */
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 30px 50px;
+}
+.footer li {
+  position: relative;
+  display: inline;
+  padding: 0 7px 0 10px;
+  white-space: nowrap;
+}
+.footer li::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  background-color: #dbdbdb;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.footer li:first-child::before {
+  width: 0;
+}
+.footer address {
+  padding-top: 15px;
+}
+
 /* mediaquery */
 /* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -716,6 +738,15 @@ body {
   .nav > div:last-child li {
     width: 100%;
   }
+
+  #cont_right .column {
+    width: 100%;
+  }
+  #cont_right .column.col7 {
+    border-right: 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
   .square a {
     width: 100%;
     margin-right: 0;
