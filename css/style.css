@@ -2,8 +2,6 @@
 body {
   background: url(../img/header_bg.jpg) repeat-x center top;
 }
-#header {
-}
 #nav {
   background-color: #f6fdff;
 }
@@ -20,6 +18,7 @@ body {
 }
 #cont_center {
   overflow: hidden;
+  min-height: 1200px;
   margin-right: 250px;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
@@ -202,12 +201,13 @@ body {
 /* title */
 .title {
   text-align: center;
+  height: 70px;
 }
 .title .btn {
   padding: 0 12px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
   background: #3192bf;
   color: #fff;
   font-size: 35px;
@@ -224,7 +224,7 @@ body {
   border-bottom: 1px solid #dbdbdb;
 }
 .column .col_tit {
-  font-size: 20px;
+  font-size: 25px;
   color: #2f7fa6;
   padding-bottom: 5px;
 }
@@ -234,6 +234,7 @@ body {
   margin-bottom: 15px;
   color: #878787;
   line-height: 18px;
+  font-size: 14px;
 }
 
 .column.col3 {
@@ -253,7 +254,7 @@ body {
   position: relative;
 }
 .menu li a {
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   color: #878787;
   border-bottom: 1px solid #dbdbdb;
@@ -276,8 +277,8 @@ body {
   position: relative;
 }
 .notice1 h5 {
-  font-size: 14px;
-  color: #2ff7ab;
+  font-size: 16px;
+  color: #2f7fa6;
   padding-bottom: 5px;
 }
 .notice1 li {
@@ -304,14 +305,14 @@ body {
   top: 3px;
   color: #878787;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
 }
 /* notice2 */
 .notice2 {
   position: relative;
 }
 .notice2 h5 {
-  font-size: 14px;
+  font-size: 16px;
   color: #2f7fa6;
   padding-bottom: 5px;
 }
@@ -342,7 +343,7 @@ body {
   top: 3px;
   color: #878787;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
 }
 /* blog1 */
 .blog1 img {
@@ -355,7 +356,7 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5),
   only screen and (min-resolution: 1.5dppx) {
-  .blog1 .img-retana {
+  .blog1 .img-retna {
     display: initial;
   }
   .blog1 .img-normal {
@@ -378,9 +379,9 @@ body {
   background-size: cover;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5),
-  only screen and (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx) {
   .blog2 .img-retina {
     background-image: url(../img/blog4_@2.jpg);
   }
@@ -412,7 +413,7 @@ body {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
 }
 .slider figcaption em {
   display: block;
@@ -536,13 +537,16 @@ body {
 .square a:nth-child(10):hover img {
   filter: sepia(120%) hue-rotate(120deg);
 }
-
-/* video */
-
+/* right side */
+.side1,
+.side2,
+.side3 {
+  padding: 25px 0 25px;
+}
 /* footer */
 .footer {
   text-align: center;
-  padding: 30px 50px;
+  margin: 30px 50px;
 }
 .footer li {
   position: relative;
@@ -620,6 +624,11 @@ body {
   }
   .nav > div ol {
     margin-bottom: 10px;
+  }
+  .side1,
+  .side2,
+  .side3 {
+    padding: 0;
   }
   #cont_right .column {
     float: left;
