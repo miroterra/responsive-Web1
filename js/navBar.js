@@ -4,6 +4,12 @@ const navBtn = document.querySelector('.title .btn'),
 
 navBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  navMenu.style.display = 'block';
-  navBtnI.className.replace('fa fa-angle-down', 'fa fa-angle-up');
+  navMenu.classList.toggle('on');
+  if (navMenu.classList.contains('on')) {
+    navBtnI.setAttribute('class', 'fa fa-angle-up');
+    navBtn.style.lineHeight = '45px';
+  } else {
+    navBtnI.setAttribute('class', 'fa fa-angle-down');
+    navBtn.style.lineHeight = '50px';
+  }
 });
